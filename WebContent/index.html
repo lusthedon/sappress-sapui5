@@ -12,7 +12,25 @@
 		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
 
 		<script>
-			
+		sap.ui.getCore().attachInit(function() {
+			var onPressImage = function(){
+				alert("Hello UI5 World!");
+			};
+		var oImage = new sap.m.Image({
+			src: "img/OpenUI5_logo_only_darkbackground_transparent.png",
+			decorative: false,
+			alt: "SAPUI5 Logo",
+			press: onPressImage
+		}).placeAt("content");
+		var oImage = new sap.m.Image({
+			src: "img/OpenUI5_logo_only_darkbackground_transparent.png",
+			decorative: false,
+			alt: "SAPUI5 Logo",
+			press: function(){
+				alert("Hello UI5!");
+			}
+		}).placeAt("content");
+		});			
 		</script>
 
 	</head>
